@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Studentappmessenger</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contacts">Add Contacts</string>
+    <string name="savedcontacts">Saved Contacts</string>
+
+</resources>

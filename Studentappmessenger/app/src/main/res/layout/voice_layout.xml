@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="help_desk"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+
+
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="00:00"
+        android:textColor="@color/buttoncolor"
+        android:textSize="17dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time"
+        android:layout_marginTop="40dp">
+
+        <LinearLayout
+            android:id="@+id/item_1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/circlebackground"
+            android:gravity="center">
+
+            <ToggleButton
+                android:id="@+id/mute_audio"
+                style="@style/toggleButton"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_toEndOf="@+id/swap_camera"
+                android:layout_toRightOf="@+id/swap_camera"
+                android:background="@drawable/audio_toggle_bg"
+                android:padding="-20dp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_1"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="mute"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+
+
+        <!--<ProgressBar-->
+        <!--android:id="@+id/mProgress"-->
+        <!--style="?android:attr/progressBarStyleSmall"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:foregroundGravity="right" />-->
+
+
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/circlebackground"
+            android:gravity="center">
+
+            <ToggleButton
+                android:id="@+id/loud_speaker"
+                style="@style/toggleButton"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/speaker_toggle_bg"
+                android:padding="-20dp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/item_1"
+            android:layout_marginRight="65dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="speaker"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+
+
+        <LinearLayout
+            android:id="@+id/item_3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/item_1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:visibility="invisible"
+            android:background="@drawable/circlebackground"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/patient_attachment"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/chat_message"
+                android:background="@drawable/attach"
+                android:onClick="toAttachment"
+                android:padding="-20dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:text="attach"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/lv_endcall"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/item_3"
+            android:layout_centerHorizontal="true"
+
+            android:background="@drawable/circlebackgroundred"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/endCall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/end_call"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
